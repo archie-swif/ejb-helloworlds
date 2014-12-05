@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ejb-jms-ear-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="ejb-jms-helloworld-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/ejb-jms-helloworld/ejb-jms-helloworld">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="testng-6.8.8.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/testng/testng/6.8.8/testng-6.8.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="bsh-2.0b4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jcommander-1.27.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/beust/jcommander/1.27/jcommander-1.27.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
