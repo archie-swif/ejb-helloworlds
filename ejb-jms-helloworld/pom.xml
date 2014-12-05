@@ -4,6 +4,7 @@
 	<groupId>com.ryabokon.helloworld</groupId>
 	<artifactId>ejb-jms-helloworld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>ear</packaging>
 
 
 	<dependencies>
@@ -26,6 +27,12 @@
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.ryabokon.helloworld</groupId>
+			<artifactId>ejb-jms-helloworld</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -36,9 +43,17 @@
 				<version>2.6</version>
 				<configuration>
 					<version>6</version>
-					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<modules>
+						<ejbModule>
+							<groupId>com.ryabokon.helloworld</groupId>
+							<artifactId>ejb-jms-helloworld</artifactId>
+						</ejbModule>
+					</modules>
+					<displayName>Hello EJB JMS</displayName>
+					<generateApplicationXml>true</generateApplicationXml>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 </project>
