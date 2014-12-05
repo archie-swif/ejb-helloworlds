@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ryabokon.helloworld</groupId>
+	<artifactId>hello-ear</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>ear</packaging>
+	<dependencies>
+  	<dependency>
+  		<groupId>hello-ejb</groupId>
+  		<artifactId>hello-ejb</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>ejb</type>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<version>1.4</version>
+					<modules>						
+						<ejbModule>
+								<groupId>hello-ejb</groupId>
+  								<artifactId>hello-ejb</artifactId>
+  						</ejbModule>
+					</modules>
+					<displayName>Hello EJB</displayName>					
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
